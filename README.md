@@ -23,3 +23,4 @@ This exercise is meant to help you indentify any potential weak spots in your kn
 
 > NOTE: These exercises are meant to assess your knowledge of `map`, `filter`, and `find`. Many of the tests will not pass if you don't use the correct method, so please avoid using `for` loops
 # array-exercises
+# Array-Exercises
