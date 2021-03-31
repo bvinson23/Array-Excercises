@@ -59,3 +59,12 @@ console.log(getStudentsByLanguage("javascript"))
 // It should accept an array of strings as a parameter named `languages`
 // It should return an array of students who know ALL of the given languages
 // Ex: getStudentsByLanguages(["Javascript", "C#"])
+export const getStudentsByLanguages = (languages) => {
+    const hasLangs = students.filter(student => {
+        if (languages.every(language => student.languages.includes(language))) {
+            return student
+        }
+    })
+    return hasLangs
+}
+console.log(getStudentsByLanguages(["Javascript"]))
