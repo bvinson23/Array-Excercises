@@ -36,14 +36,21 @@ console.log(getPolyglotStudents(2))
 // It should not accept any parameters
 // It should return an array of instructors that don't have any students
 export const getAvailableInstructors = () => {
-    return students.filter(student => student.instructorId)
+    return instructors.filter(instructor => {
+        return !students.find(student => {
+            return instructor.id === student.instructorId
+        })
+    })
 }
 console.log(getAvailableInstructors())
 // Export a function called getStudentsByLanguage
 // It should accept one string parameter named `language`
 // It should return an array of students who know the given language
 // HINT: In addition to the `filter` method, you might also look up the `some` method
-
+export const getStudentsByLanguage = (language) => {
+    return students.filter(student => student.languages.some(student => student === language))
+}
+console.log(getStudentsByLanguage("javascript"))
 /******** ADVANCED CHALLENGE ********/
 /******** Only do this if all other tests are passing ****/
 /******** To test, uncomment the code at the bottom of tests/filter.spec.js  *****/
