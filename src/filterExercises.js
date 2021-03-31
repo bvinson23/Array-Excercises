@@ -67,4 +67,3 @@ export const getStudentsByLanguages = (languages) => {
     })
     return hasLangs
 }
-// console.log(getStudentsByLanguages(["Javascript", "C#"]))
